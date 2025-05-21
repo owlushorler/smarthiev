@@ -79,7 +79,7 @@ export default function Navbar() {
         {/**mobile setion */}
       </nav>
       {menuOpen && (
-        <div className=" sm:hidden fixed inset-0 bg-white z-50 flex flex-col p-6">
+        <div className=" sm:hidden fixed inset-0 bg-white z-50 flex flex-col gap-6 p-6">
           {/* Close Button */}
           <div
             className="self-start p-2 border border-dashed border-gray-300 rounded"
@@ -89,14 +89,14 @@ export default function Navbar() {
           </div>
 
           {/* Menu Box */}
-          <div className="mt-4 p-4 border-dashed  rounded space-y-3">
+          <div className="mt-4 p-4 border-dashed   rounded space-y-3">
             <Link href="/">
-              <p className="cursor-pointer text-gray-700 hover:text-gray-900">
+              <p  onClick={() => setMenuOpen(false)} className="cursor-pointer text-gray-700 hover:text-gray-900">
                 Discover
               </p>
             </Link>
-            <Link href="service">
-              <p className="cursor-pointer text-gray-700 hover:text-gray-900">
+            <Link  href="service">
+              <p  onClick={() => setMenuOpen(false)} className="cursor-pointer text-gray-700 hover:text-gray-900">
                 Services
               </p>
             </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
               }
             >
               <div
-                className="flex items-center hover:text-blue-600 transition focus:outline-none"
+                className="flex items-center gap-6 hover:text-blue-600 transition focus:outline-none"
                 aria-haspopup="true"
                 aria-expanded={isDropdownOpen}
               >
@@ -120,10 +120,12 @@ export default function Navbar() {
               {isDropdownOpen && (
                 <div className="absolute z-10 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg">
                   <Link href="faq">
-                    <div className="block px-4 py-2 hover:bg-gray-100">Fax</div>
+                    <div onClick={() => setMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-100">Fax</div>
                   </Link>
-                  <Link href="blog">
-                    <div className="block px-4 py-2 hover:bg-gray-100">
+                  <Link  href="blog">
+                    <div    onClick={() => {
+              setMenuOpen(false);
+            }} className="block px-4 py-2 hover:bg-gray-100">
                       Blog
                     </div>
                   </Link>
@@ -133,8 +135,8 @@ export default function Navbar() {
           </div>
 
           {/* Get Started Button */}
-          <Link href="ContactUs">
-            <Button className="  bg-teal-700  text-white px-4 py-2 rounded hover:bg-teal-800 transition">
+          <Link href="contactUs">
+            <Button    onClick={() => setMenuOpen(false)} className="  bg-teal-700  text-white px-4 py-2 rounded hover:bg-teal-800 transition">
               Get Started
             </Button>
           </Link>

@@ -57,7 +57,7 @@ export default function ExperienceAndTestimonials() {
   };
 
   return (
-    <section className="py-16 px-6 max-w-7xl mx-auto">
+    <section className="py-16 px-6 max-w-7xl mt-4 mx-auto">
       {/* Experience Stats */}
       <div className="flex  flex-col md:flex-row justify-center items-center gap-10 mb-20">
         {stats.map(({ title, subtitle, description }, idx) => (

@@ -41,7 +41,7 @@ export default function ServicesGrid() {
   ];
 
   return (
-    <section className="p-6 md:max-w-[1440px] sm:h-[1326px] justify-center  bg-gradient-to-br from-[#CEDFD9] via-teal-50 to-[#CEDFD9] bg-[#CEDFD9] h-[1808px] gap-{56px] px-[15px] flex flex-col items-center">
+    <section className="p-6 md:max-w-[1440px] sm:h-[1326px] justify-center mt-2  bg-gradient-to-br from-[#CEDFD9] via-teal-50 to-[#CEDFD9] bg-[#CEDFD9] h-[1808px] gap-{56px] px-[15px] flex flex-col items-center">
       <h2 className="text-4xl font-semibold mb-8">What We Do Best</h2>
       <div
         className="

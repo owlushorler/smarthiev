@@ -72,7 +72,7 @@ export default function ResourcesInsights() {
         {posts.map(({ id, title, excerpt, image, url }) => (
           <article
             key={id}
-            className="  flex w-[296px] h-[379px]  flex-col border items-center  md:w-[327px] md:h-[411px] border-gray-200 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+            className="  flex w-[296px]   flex-col border items-center  md:w-[327px] md:h-[411px] border-gray-200 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
           >
             <Image
               src={image}
