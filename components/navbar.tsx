@@ -4,14 +4,46 @@ import Link from "next/link";
 import Image from "next/image";
 import logo from "../public/images/shslogo 1.png";
 import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { ChevronDown, Menu } from "lucide-react";
+import { MobileSidebar } from "./mobile-sidebar";
+
+const routes = [
+  {
+    label: "Discover",
+    href: "/",
+  },
+  {
+    label: "Service",
+    href: "/service",
+  },
+  {
+    label: "Resources",
+    subItems: [
+      {
+        label: "Fax",
+        href: "fax",
+      },
+      {
+        label: "Blog",
+        href: "blog",
+      },
+    ],
+  },
+];
 
 export default function Navbar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const toggleMenu = () => setOpen(!open);
 
   return (
-    <nav className="  ">
-      <nav className=" .body_bg flex items-center    bg-[#F6FBF8] justify-between pt-[65px] mx-[21px] max-h-[34px]   md:max-w-[1247px] sm:max-w-[719px] sm:mx-[25px] sm:pt-[57px] sm:h-[37.48]  md:mx-[97px] md:pt-[78px] ">
+    <div>
+      <nav className="flex md:px-16 px-5 py-3 items-center justify-between shadow">
         <Link href="/">
           <Image
             src={logo}
@@ -21,127 +53,54 @@ export default function Navbar() {
         </Link>
         {/* Navigation Links */}
         <div className="hidden sm:flex space-x-8 text-gray-700 font-medium items-center">
-          <Link href="/">
-            <div className="hover:text-blue-600 transition">Discover</div>
-          </Link>
-          <Link href="/service">
-            <div className="hover:text-blue-600 transition">Services</div>
-          </Link>
-
-          {/* Resources Dropdown */}
-          <div
-            className="relative"
-            onClick={() =>
-              isDropdownOpen
-                ? setIsDropdownOpen(false)
-                : setIsDropdownOpen(true)
-            }
-          >
-            <button
-              className="flex items-center hover:text-blue-600 transition focus:outline-none"
-              type="button"
-              aria-haspopup="true"
-              aria-expanded={isDropdownOpen}
-            >
-              Resources <span className="ml-1">▾</span>
-            </button>
-
-            {isDropdownOpen && (
-              <div className="absolute z-10 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg">
-                <Link href="faq">
-                  <div className="block px-4 py-2 hover:bg-gray-100">Fax</div>
-                </Link>
-                <Link href="blog">
-                  <div className="block px-4 py-2 hover:bg-gray-100">Blog</div>
-                </Link>
+          {routes.map((route, index) =>
+            route.subItems ? (
+              <div key={index}>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <div className="cursor-pointer flex items-center justify-between flex-row gap-x-2 text-sm lg:text-base">
+                      <span>{route.label}</span>
+                      <ChevronDown size={16} />
+                    </div>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="flex flex-col gap-2 mt-2 min-w-[200px] p-3">
+                    {route.subItems.map((subItem, subIndex) => (
+                      <DropdownMenuItem key={subIndex}>
+                        <Link href={subItem.href} className="w-full">
+                          {subItem.label}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </div>
-            )}
-          </div>
+            ) : (
+              <Link
+                href={route.href as string}
+                className="transition-transform duration-300 ease-in-out hover:scale-105 text-sm lg:text-base"
+                key={index}
+              >
+                {route.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* Get Started Button */}
         <div>
           <Link href="contactUs">
-            <Button className="hidden sm:flex bg-teal-700  text-white px-4 py-2 rounded hover:bg-teal-800 transition">
+            <Button className="hidden sm:flex">
               Get Started
             </Button>
           </Link>
-          <div
-            onClick={() => {
-              setMenuOpen(true);
-            }}
-            className=" sm:hidden text-teal-700 text-2xl"
-          >
-            &#9776;
+          <div onClick={toggleMenu} className=" sm:hidden text-teal-700">
+            <Menu size={26} />
           </div>
         </div>
 
         {/**mobile setion */}
+        <MobileSidebar open={open} setOpen={toggleMenu} routes={routes} />
       </nav>
-      {menuOpen && (
-        <div className=" sm:hidden fixed inset-0 bg-white z-50 flex flex-col gap-6 p-6">
-          {/* Close Button */}
-          <div
-            className="self-start p-2 border border-dashed border-gray-300 rounded"
-            onClick={() => setMenuOpen(false)}
-          >
-            X
-          </div>
-
-          {/* Menu Box */}
-          <div className="mt-4 p-4 border-dashed   rounded space-y-3">
-            <Link href="/">
-              <p  onClick={() => setMenuOpen(false)} className="cursor-pointer text-gray-700 hover:text-gray-900">
-                Discover
-              </p>
-            </Link>
-            <Link  href="service">
-              <p  onClick={() => setMenuOpen(false)} className="cursor-pointer text-gray-700 hover:text-gray-900">
-                Services
-              </p>
-            </Link>
-            {/* Resources Dropdown */}
-            <div
-              className="relative"
-              onClick={() =>
-                isDropdownOpen
-                  ? setIsDropdownOpen(false)
-                  : setIsDropdownOpen(true)
-              }
-            >
-              <div
-                className="flex items-center gap-6 hover:text-blue-600 transition focus:outline-none"
-                aria-haspopup="true"
-                aria-expanded={isDropdownOpen}
-              >
-                Resources <span className="ml-1">▾</span>
-              </div>
-
-              {isDropdownOpen && (
-                <div className="absolute z-10 mt-2 w-32 bg-white border border-gray-200 rounded-md shadow-lg">
-                  <Link href="faq">
-                    <div onClick={() => setMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-100">Fax</div>
-                  </Link>
-                  <Link  href="blog">
-                    <div    onClick={() => {
-              setMenuOpen(false);
-            }} className="block px-4 py-2 hover:bg-gray-100">
-                      Blog
-                    </div>
-                  </Link>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Get Started Button */}
-          <Link href="contactUs">
-            <Button    onClick={() => setMenuOpen(false)} className="  bg-teal-700  text-white px-4 py-2 rounded hover:bg-teal-800 transition">
-              Get Started
-            </Button>
-          </Link>
-        </div>
-      )}
-    </nav>
+    </div>
   );
 }

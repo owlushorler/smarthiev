@@ -85,16 +85,20 @@ export default function ExperienceAndTestimonials() {
       <h2 className="text-xl font-semibold text-teal-900 mb-10 text-center">
         Client testimonials
       </h2>
-      <div className="flex flex-col sm:px-10 md:px-8  md:flex  md:flex-row justify-between md:max-w-[1249px] sm:max-w-[718px]  items-center gap-6">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {testimonials.map(({ rating, text, author, role }, idx) => (
           <div
             key={idx}
-            className=" flex flex-col justify-between border max-w-[354px] h-[205px] sm:h-[153px] md:w-[395px] md:h-[266px] sm:w-[227px] border-teal-200 rounded-lg p-3 shadow-sm hover:shadow-md transition"
+            className=" flex flex-col justify-between border w-full h-full border-teal-200 rounded-lg p-3 shadow-sm hover:shadow-md transition"
           >
             <div className="">{renderStars(rating)}</div>
-            <p className="text-teal-700  text-[10px]">{text}</p>
-            <p className=" text-[10px] font-semibold text-teal-900">{author}</p>
-            <p className=" text-[10px] text-xs text-teal-600">{role}</p>
+            <div className="flex flex-col mt-5 gap-5">
+              <p className="text-teal-700  text-[10px]">{text}</p>
+              <p className=" text-[10px] font-semibold text-teal-900">
+                {author}
+              </p>
+              <p className=" text-[10px] text-xs text-teal-600">{role}</p>
+            </div>
           </div>
         ))}
       </div>

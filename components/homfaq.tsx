@@ -33,8 +33,8 @@ export default function FAQ() {
   };
 
   return (
-    <nav>
-      <section className="max-w-[1246px] h-[504px] px-14 mx-auto ">
+    <div>
+      <section className="lg:px-16 md:px-10 px-5">
         <h2 className="text-3xl font-semibold text-gray-900 mb-2 text-center">
           Frequently Asked Questions
         </h2>
@@ -77,14 +77,14 @@ export default function FAQ() {
       </section>
       <section>
         <section
-          className="content_bg relative  bg-cover bg-center h-96 flex items-center justify-center"
+          className="content_bg relative  bg-cover bg-center flex items-center justify-center mt-10"
           aria-label="Let's get started hero section"
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="absolute inset-0 bg-black opacity-40"></div>
 
           {/* Content */}
-          <div className="relative z-10 text-center px-4 max-w-xl text-white">
+          <div className="relative z-10 text-center px-4 max-w-xl text-white py-10">
             <h1 className="text-3xl md:text-4xl font-semibold mb-4">
               Let's Get Started
             </h1>
@@ -93,13 +93,13 @@ export default function FAQ() {
               execution.
             </p>
             <Link href="contactUs">
-              <Button className="bg-[#28656A] hover:bg-teal-800 transition px-6 py-3 rounded-md font-semibold">
+              <Button>
                 Book a Free Consultation
               </Button>
             </Link>
           </div>
         </section>
       </section>
-    </nav>
+    </div>
   );
 }

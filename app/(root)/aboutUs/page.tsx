@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function AboutUs() {
   return (
-    <nav>
+    <div>
       <section className="body_bg flex flex-col text-[#28656A]  max-w-7xl mx-auto px-6 py-12 text-center gap-3">
         <h2 className="text-4xl font-semibold mb-2">About Us</h2>
         <p className="text-3xl font-semibold mb-4">
@@ -60,6 +60,6 @@ export default function AboutUs() {
           </Button>
         </section>
       </section>
-    </nav>
+    </div>
   );
 }

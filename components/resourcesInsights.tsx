@@ -37,8 +37,8 @@ export default function ResourcesInsights() {
   ];
 
   return (
-    <section className="md:max-w-[1091px]  mx-auto px-6 py-16">
-      <div className="flex justify-between items-center mb-12">
+    <section className="lg:px-16 md:px-10 px-5 py-16">
+      <div className="flex justify-between items-start md:items-center mb-12 flex-col md:flex-row gap-5">
         <div>
           <h2 className="text-3xl font-semibold text-gray-900">
             Resources & Insights
@@ -68,18 +68,18 @@ export default function ResourcesInsights() {
         </Link>
       </div>
 
-      <div className=" md:grid  bg-[#F6FBF8] flex flex-col  justify-center items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className=" grid bg-[#F6FBF8] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map(({ id, title, excerpt, image, url }) => (
           <article
             key={id}
-            className="  flex w-[296px]   flex-col border items-center  md:w-[327px] md:h-[411px] border-gray-200 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
+            className="flex  flex-col border items-center w-full h-full border-gray-200 rounded-lg shadow-sm hover:shadow-md transition cursor-pointer"
           >
             <Image
               src={image}
               alt={title}
-              className="rounded-t-lg   md:w-[295px] md:h-[206px] object-cover"
+              className="rounded-t-lg w-full md:h-[206px] object-cover"
             />
-            <div className="p-6">
+            <div className="md:p-6 p-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {title}
               </h3>

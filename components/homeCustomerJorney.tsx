@@ -10,10 +10,10 @@ import Link from "next/link";
 // pages/how-we-work.js
 export default function HowWeWork() {
   return (
-    <div className="min-h-screen bg-white py-16 px-6 md:px-20 lg:px-40 font-sans text-gray-900">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="min-h-screen bg-white py-16 px-5 md:px-10 lg:px-20 font-sans text-gray-900">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left content: Steps */}
-        <div>
+        <div className="w-full">
           <p className="text-sm text-gray-600 uppercase tracking-widest mb-2">
             Customer Journey
           </p>
@@ -105,7 +105,7 @@ export default function HowWeWork() {
         </div>
 
         {/* Right content: Image and call-to-action */}
-        <div className="flex flex-col max-w-md mx-auto md:max-w-none md:mx-0">
+        <div className="flex flex-col w-full">
           <Image
             src={work}
             alt="Person working on laptop"

@@ -4,11 +4,11 @@ import logo from "../public/images/shslogo 1.png";
 import Link from "next/link";
 export default function Footer() {
   return (
-    <footer className="my-10 ">
-      <footer className="flex justify-center bg-[#F6FBF8]  border-t-8  border-[#28656A] py-10 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-600 text-sm">
+    <footer className="">
+      <div className="flex justify-center bg-[#F6FBF8]  border-t-8  border-[#28656A] lg:px-16 md:px-10 px-5 py-10">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-600 text-sm">
           {/* Services */}
-          <div>
+          <div className="w-full">
             <h4 className="font-semibold text-gray-900 mb-4">Services</h4>
             <ul className="space-y-2">
               <li>Web Development & E-commerce</li>
@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
 
           {/* Explore */}
-          <div>
+          <div className="w-full">
             <h4 className="font-semibold text-gray-900 mb-4">Explore</h4>
             <ul className="space-y-2">
               <li className="cursor-pointer hover:text-teal-600">
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           {/* Company */}
-          <div>
+          <div className="w-full">
             <h4 className="font-semibold text-gray-900 mb-4">Company</h4>
             <ul className="space-y-2">
               <li className="cursor-pointer hover:text-teal-600">
@@ -55,9 +55,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-      </footer>
+      </div>
       {/* Logo & Copyright */}
-      <div className="flex flex-col items-center my-2 justify-center border-b-8  border-[#28656A] ">
+      <div className="flex flex-col items-center not-[]:justify-center">
         <Image src={logo} alt="logo" />
         <p className="text-xs text-gray-500">
           © 2025 ABC. All rights reserved.
