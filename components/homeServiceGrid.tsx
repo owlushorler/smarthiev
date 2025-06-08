@@ -43,13 +43,12 @@ export default function ServicesGrid() {
   return (
     <section className="p-6 max-w-screen justify-center mt-2  bg-gradient-to-br from-[#CEDFD9] via-teal-50 to-[#CEDFD9] bg-[#CEDFD9] gap-5 flex flex-col items-center py-10">
       <h2 className="text-4xl font-semibold mb-8">What We Do Best</h2>
-      <div
-        className="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 gap-5"
-      >
+      <div className="grid grid-cols-1 items-center justify-center md:grid-cols-2 lg:grid-cols-3 gap-5">
         {services.map(({ id, title, description, icon }: serviceDto) => (
           <div
             key={id}
-            className="bg-[#28656A] w-full h-full md:p-5 p-3 text-green-200 rounded-lg  flex flex-col gap-4 hover:shadow-lg transition-shadow cursor-pointer"
+            className="bg-[#28656A] w-full h-full md:p-5 p-3 text-green-200 rounded-lg 
+             flex flex-col gap-4 hover:shadow-lg transition-shadow cursor-pointer"
           >
             <div className="text-3xl w-14 h-14 rounded-2xl">{icon}</div>
             <div className="w-[303px] flex flex-col gap-5">
@@ -68,23 +67,7 @@ export default function ServicesGrid() {
       </div>
 
       <Link href="service">
-        <Button
-          className="
-            mt-12
-           bg-[#28656A]
-            hover:bg-green-600
-           text-white
-            px-6
-            py-2
-            rounded
-            transition-colors
-
-
-            sm:w-auto
-          "
-        >
-          Explore All Services &rarr;
-        </Button>
+        <Button>Explore All Services &rarr;</Button>
       </Link>
     </section>
   );

@@ -13,7 +13,6 @@
 }
 
 .content2_bg {
-  margin: 50px 0;
   background-image: url("../public/images/serviceback.png");
   height: 406px;
   width: 100%;
@@ -26,7 +25,7 @@
   margin: 50px 0;
   background-image: url("../public/images/serviceback.png");
   height: 332px;
-  width: 100vw;
+
   background-size: cover;
   background-repeat: no-repeat;
   padding: 10px;

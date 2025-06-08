@@ -26,8 +26,8 @@ const routes = [
     label: "Resources",
     subItems: [
       {
-        label: "Fax",
-        href: "fax",
+        label: "Faq",
+        href: "faq",
       },
       {
         label: "Blog",
@@ -89,9 +89,7 @@ export default function Navbar() {
         {/* Get Started Button */}
         <div>
           <Link href="contactUs">
-            <Button className="hidden sm:flex">
-              Get Started
-            </Button>
+            <Button className="hidden sm:flex">Get Started</Button>
           </Link>
           <div onClick={toggleMenu} className=" sm:hidden text-teal-700">
             <Menu size={26} />

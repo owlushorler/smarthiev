@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 // components/WhyWorkWithUs.js
 export default function WhyWorkWithUs() {
   return (
-    <section className="max-w-7xl justify-center mx-auto p-8  rounded-lg flex flex-col md:flex-row items-center gap-8">
+    <section className="w-full justify-center mx-auto p-8  rounded-lg flex flex-col md:flex-row items-center gap-8">
       {/* Left: Red circle */}
       <div className="flex items-center justify-center bg-[#EF6C57] text-white rounded-full w-56 h-56 text-center px-6">
         <h2 className="text-xl font-semibold leading-relaxed">
@@ -15,7 +15,7 @@ export default function WhyWorkWithUs() {
       </div>
 
       {/* Right: Bullet points and button */}
-      <div className="flex flex-col flex-1 max-w-lg space-y-6">
+      <div className="flex flex-col  space-y-6">
         <ul className="space-y-4 text-gray-700">
           {[
             "Dedicated Free Member - We focus on execution, not just ideas",
@@ -30,9 +30,7 @@ export default function WhyWorkWithUs() {
           ))}
         </ul>
         <Link href="contactUs">
-          <Button className="self-start bg-teal-700 hover:bg-teal-800 hover:cursor-pointer text-white font-semibold px-5 py-3 rounded-md transition">
-            Get a Free Refinishing Quote
-          </Button>
+          <Button>Get a Free Refinishing Quote</Button>
         </Link>
       </div>
     </section>

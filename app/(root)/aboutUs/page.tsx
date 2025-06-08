@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <div>
-      <section className="body_bg flex flex-col text-[#28656A]  max-w-7xl mx-auto px-6 py-12 text-center gap-3">
+      <section className="body_bg flex flex-col text-[#28656A]  w-full h-full lg:p-15 md:p-10 p-5  text-center gap-3">
         <h2 className="text-4xl font-semibold mb-2">About Us</h2>
         <p className="text-3xl font-semibold mb-4">
           From Idea to Scalable Product – We Build What Matters
@@ -29,7 +29,7 @@ export default function AboutUs() {
           strategy, execution, and scalability in mind.
         </p>
 
-        <div className="flex items-center  h-[110px]  md:max-w-[1247px] md:h-[284px] sm:max-w-[699px] sm:h-[158px] justify-center gap-6">
+        <div className="flex items-center w-full   justify-center gap-6">
           {images.map((src, index) => (
             <div
               key={index}
@@ -48,16 +48,14 @@ export default function AboutUs() {
       <section>
         <WhoWeAre />
         <MeetOurTeam />
-        <section className="max-w-3xl mx-auto px-6 py-16 text-center">
+        <section className="w-full mx-auto px-6 py-16 text-center">
           <h2 className="text-2xl font-semibold mb-4">Let's Build Smarter</h2>
           <p className="text-gray-700 mb-8">
             You need more than just developers—you need a development partner
             who ensures your product thrives. From MVP to scalable product—let’s
             build something game-changing.
           </p>
-          <Button className="bg-teal-700 text-white px-6 py-3 rounded hover:bg-teal-800 transition">
-            Book a Free Consultation
-          </Button>
+          <Button>Book a Free Consultation</Button>
         </section>
       </section>
     </div>

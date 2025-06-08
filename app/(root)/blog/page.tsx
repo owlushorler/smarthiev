@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function InsightsSection() {
   return (
     <nav>
-      <section className="max-w-6xl body_bg mx-auto px-6 py-12 flex  md:flex-row items-center justify-between">
+      <section className="w-full body_bg h-full  lg:p-15 md:p-10 p-5  flex flex-row justify-between items-center ">
         <div className="max-w-xl">
           <h2 className="text-2xl md:text-3xl font-semibold text-[#28656A] mb-4">
             Smarthivetech Insights - Trends, Innovations & Best Practices

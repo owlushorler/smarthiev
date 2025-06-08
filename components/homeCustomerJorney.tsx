@@ -115,9 +115,7 @@ export default function HowWeWork() {
             Need guidance? Let&apos;s map out your journey
           </p>
           <Link href="contactUs">
-            <Button className="bg-[#28656A] hover:bg-teal-700 transition text-white font-semibold py-3 rounded-md w-full md:w-auto px-10">
-              Get in touch
-            </Button>
+            <Button className="w-full">Get in touch</Button>
           </Link>
         </div>
       </div>

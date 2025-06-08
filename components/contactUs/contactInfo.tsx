@@ -1,7 +1,7 @@
 export default function ContactInfo() {
   return (
-    <footer className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 border-t border-gray-200">
-      <div className="flex flex-col justify-center sm:flex-row sm:justify-between text-sm text-gray-700">
+    <footer className="w-full lg:p-15 md:p-10 p-5">
+      <div className="flex flex-col justify-center md:flex-row md:justify-between text-sm text-gray-700">
         {/* Contact Us */}
         <div className="mb-4 sm:mb-0">
           <h3 className="font-semibold mb-1">Contact us</h3>

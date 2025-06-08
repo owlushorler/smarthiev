@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function SupportSection() {
   return (
-    <section className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+    <section className="w-full lg:p-15 md:p-10 p-5">
       {/* Back Button */}
 
       {/* Still Have Questions */}
@@ -19,25 +19,7 @@ export default function SupportSection() {
       </div>
 
       {/* Contact Support Card */}
-      <div className="bg-emerald-100 rounded-lg p-6 flex items-center space-x-6 shadow-md">
-        {/* Icon */}
-        <div className="text-rose-400">
-          {/* Headphone Icon SVG */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 1v4m-6 4a6 6 0 0112 0v7a3 3 0 11-6 0v-7a3 3 0 00-6 0z"
-            />
-          </svg>
-        </div>
+      <div className="bg-green-100 rounded-lg p-6 flex items-center space-x-6 shadow-md">
         <div className="flex-1">
           <h3 className="font-semibold text-gray-900">Contact Support</h3>
           <p className="text-gray-700">
@@ -46,9 +28,7 @@ export default function SupportSection() {
           </p>
         </div>
         <Link href="ContactUs">
-          <Button className="bg-emerald-700 text-white px-4 py-2 rounded-md hover:bg-emerald-800 transition">
-            Contact Us
-          </Button>
+          <Button>Contact Us</Button>
         </Link>
       </div>
 
@@ -63,7 +43,7 @@ export default function SupportSection() {
           execution.
         </p>
         <Link href="contactus">
-          <Button className="inline-flex items-center bg-emerald-700 text-white px-6 py-2 rounded-md hover:bg-emerald-800 transition">
+          <Button>
             Book a Free Consultation
             {/* Optional icon */}
             <ArrowPathIcon className="h-5 w-5 ml-2" />

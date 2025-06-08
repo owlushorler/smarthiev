@@ -28,14 +28,14 @@ export default function ContactForm() {
   });
 
   return (
-    <div className="lg:max-w-[1247px] lg:h-[673px]   max-w-4xl mx-auto p-6">
+    <div className="w-full lg:p-15 md:p-10 p-5">
       <form
         onSubmit={formik.handleSubmit}
-        className="body_bg space-y-6  lg:max-w-[1247px] lg:h-[673px] flex flex-col justify-between "
+        className="body_bg space-y-6 w-full  flex flex-col justify-between "
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* Name */}
-          <div className="lg:max-w-[607px] lg:h-[84px] ">
+          <div className="w-full lg:h-[84px] ">
             <label
               htmlFor="name"
               className="block text-sm font-medium text-gray-700"
@@ -130,7 +130,7 @@ export default function ContactForm() {
         </div>
 
         {/* Message */}
-        <div className="max-w-[1247px] h-[247px] ">
+        <div className="w-full h-[247px] ">
           <label
             htmlFor="message"
             className="block text-sm font-medium text-gray-700"
@@ -169,10 +169,7 @@ export default function ContactForm() {
 
         {/* Submit Button */}
         <div className=" flex justify-center items-center ">
-          <Button
-            type="submit"
-            className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-emerald-700 hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
-          >
+          <Button type="submit" className="">
             Submit
           </Button>
         </div>

@@ -50,13 +50,10 @@ export default function FaqAccordion() {
   };
 
   return (
-    <section className="body_bg max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section className="body_bg w-full lg:p-15 md:p-10 p-5 ">
       <div className="space-y-4">
         {faqs.map(({ id, question, answer }) => (
-          <div
-            key={id}
-            className="bg-[#EF6C57] px-[24px] py-[10px] max-w-[1246px] rounded-md"
-          >
+          <div key={id} className="bg-[#EF6C57]  rounded-md">
             <button
               onClick={() => toggle(id)}
               className="w-full flex justify-between items-center px-6 py-4 text-left font-semibold text-gray-900 focus:outline-none"

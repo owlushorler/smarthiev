@@ -63,9 +63,9 @@ export default function ExperienceAndTestimonials() {
         {stats.map(({ title, subtitle, description }, idx) => (
           <div
             key={idx}
-            className="bg-[#28656A] w-[348px] h-[134px] rounded-2xl px-[5px] sm:px-0 sm:pr-[5px]  "
+            className="bg-[#28656A] w-full h-[134px] rounded-2xl px-[5px] md:px-0 md:pr-[5px]  "
           >
-            <div className="flex flex-col bg-[#F6FBF8] py-[10px]  h-[134px] rounded-2xl items-center  text-center  justify-between  md:border-t-0 ">
+            <div className="flex flex-col bg-[#F6FBF8] py-5  h-[134px] rounded-2xl items-center  text-center  justify-between  md:border-t-0 ">
               {" "}
               <p className="text-sm font-bold  text-[#28656A]">{subtitle}</p>
               <h3 className="text-3xl font-semibold text-red-400 mb-1">
@@ -89,7 +89,8 @@ export default function ExperienceAndTestimonials() {
         {testimonials.map(({ rating, text, author, role }, idx) => (
           <div
             key={idx}
-            className=" flex flex-col justify-between border w-full h-full border-teal-200 rounded-lg p-3 shadow-sm hover:shadow-md transition"
+            className=" flex flex-col justify-between border w-full h-full
+             border-teal-200 rounded-lg p-3 shadow-sm hover:shadow-md transition"
           >
             <div className="">{renderStars(rating)}</div>
             <div className="flex flex-col mt-5 gap-5">

@@ -11,7 +11,7 @@ export default function FAQHeader() {
   return (
     <div className="body_bg">
       <div className="body_bg flex justify-center">
-        <section className="max-w-4xl  mx-auto px-4  gap-7 sm:px-6 lg:px-8 py-12 flex items-center space-x-8">
+        <section className="w-full lg:p-15 md:p-10 p-5 flex justify-between space-x-8">
           <div>
             <h2 className="text-4xl text-[#28656A]  font-light mb-2">
               <span>Frequently </span>
@@ -38,7 +38,6 @@ export default function FAQHeader() {
       <div className="mt-8 text-center">
         <Button
           onClick={() => (question ? setquestion(false) : setquestion(true))}
-          className="bg-[#28656A] text-white px-8 py-2 rounded-md hover:bg-emerald-800 transition-colors"
         >
           {question ? "See More" : "Back"}
         </Button>

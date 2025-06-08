@@ -5,7 +5,7 @@ import WhyWorkWithUs from "@/components/service/whyWorkwithOur";
 const book: string = "/images/Laptop Mockups.png";
 export default function CreativeSolutions() {
   return (
-    <nav>
+    <nav className="w-full">
       <section
         className="content2_bg relative bg-cover bg-center flex items-center justify-start"
         aria-label="Let's get started hero section"
@@ -53,7 +53,7 @@ export default function CreativeSolutions() {
         list5="Upgrade your online presence!"
         button=" Get a Free Quote"
         img={book}
-        style=" body_bg flex flex-col-reverse  lg:flex-row  justify-center items-center gap-10"
+        style=" body_bg flex flex-col-reverse  md:flex-row  justify-center items-center gap-10"
       />
       <WebDevelopmentSection
         topic="Web  &amp; Mobile App Developer"
@@ -65,7 +65,7 @@ export default function CreativeSolutions() {
         list5="Turn your idea into reality!"
         button=" Get a Free Quote"
         img="/images/Mockup.png"
-        style=" body_bg flex flex-col-reverse  lg:flex-row-reverse justify-center items-center gap-10"
+        style=" body_bg flex flex-col-reverse  md:flex-row-reverse justify-center items-center gap-10"
       />
       <WebDevelopmentSection
         topic="MVP Development"
@@ -78,7 +78,7 @@ export default function CreativeSolutions() {
         list4="   Validate your idea!"
         button=" Let's Build"
         img="/images/mvp-what-is-an-mvp-mvp-design-minimum-viable-product-ux-design-protoype 3.png"
-        style=" body_bg flex flex-col-reverse  lg:flex-row justify-center items-center gap-10"
+        style=" body_bg flex flex-col-reverse  md:flex-row justify-center items-center gap-10"
       />
 
       <WebDevelopmentSection
@@ -91,7 +91,7 @@ export default function CreativeSolutions() {
         list4="Need expert guidance?"
         button="Schedule a Free Call"
         img="/images/Laptop Mockups.png"
-        style=" body_bg flex flex-col-reverse  lg:flex-row-reverse justify-center items-center gap-10"
+        style=" body_bg flex flex-col-reverse  md:flex-row-reverse justify-center items-center gap-10"
       />
 
       <div className="max-w-4xl mx-auto px-6 py-8 text-center flex items-center justify-center gap-3">

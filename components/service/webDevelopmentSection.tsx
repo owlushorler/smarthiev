@@ -29,11 +29,11 @@ export default function WebDevelopmentSection({
   style,
 }: YourDataDTO) {
   return (
-    <section className="max-w-7xl mx-auto px-6 ">
+    <section className="w-full mt-5 md:px-10 lg:px-15 px-5   ">
       <div className={style}>
-        <ul className="space-y-5 flex-1 max-w-md">
+        <ul className="w-full md:w-[50%] flex flex-col  gap-6   ">
           <h2 className="md:text-3xl text-xl font-semibold  mb-4">{topic}</h2>
-          <p className="text-[#28656A]  mb-10">{content}</p>
+          <p className="text-[#28656A]  ">{content}</p>
 
           <ul className="flex flex-col items-left gap-3 text-[#28656A]">
             {/* Bullet icon */}
@@ -66,22 +66,20 @@ export default function WebDevelopmentSection({
             )}
           </ul>
 
-          <div className="mt-12 text-center">
+          <div className=" text-center">
             <Link href="contactUs">
-              <Button className="bg-teal-700 hover:bg-teal-800 text-white font-semibold px-6 py-3 rounded-md  hover:cursor-pointer shadow-md transition">
-                {button}
-              </Button>
+              <Button>{button}</Button>
             </Link>
           </div>
         </ul>
 
-        <div className="flex-1 max-w-xl w-full relative rounded-lg ">
+        <div className="w-full md:w-[50%] px-5 md:px-10 relative rounded-lg ">
           <Image
             src={img}
             alt="Laptop showing custom website"
-            width={600}
-            height={400}
-            className="rounded-lg"
+            width={200}
+            height={200}
+            className="rounded-lg   w-full"
           />
         </div>
       </div>

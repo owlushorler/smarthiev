@@ -3,13 +3,14 @@ import ExperienceAndTestimonials from "@/components/homeExperimentalandTestimony
 import HeroSection from "@/components/homeHeroSection";
 import ServicesGrid from "@/components/homeServiceGrid";
 import FAQ from "@/components/homfaq";
-
+import whatwe from "../../public/images/whatwedo.png";
 import ResourcesInsights from "@/components/resourcesInsights";
 
 import { Button } from "@/components/ui/button";
 import { Link } from "lucide-react";
 
 import { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -24,41 +25,15 @@ export default function Homepage() {
         <div className="flex items-center justify-center bg-gradient-to-r from-[#28656A] via-teal-800 to-teal-900 p-10 text-white font-serif md:rounded-2xl">
           <div className="flex-col-reverse sm:flex-col-reverse flex md:flex-row items-center gap-16">
             {/* Left Illustration */}
-            <div className="flex justify-center md:justify-start w-full md:w-1/2 relative">
-              {/* Large white arrow/bridge shape */}
-              <svg
-                className="w-80 h-80 drop-shadow-lg"
-                viewBox="0 0 200 200"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M40 170 L40 80 L80 50 L95 75 L125 60 L165 80"
-                  stroke="white"
-                  strokeWidth="18"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-                <path
-                  d="M130 120 L190 120"
-                  stroke="white"
-                  strokeWidth="18"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-                <circle cx="30" cy="160" r="10" fill="#065f46" />{" "}
-                {/* silhouette head */}
-                <rect
-                  x="27"
-                  y="165"
-                  width="6"
-                  height="15"
-                  fill="#065f46"
-                />{" "}
-                {/* silhouette body */}
-              </svg>
+            <div className="flex flex-col w-full md:w-[50%]">
+              <Image
+                src={whatwe}
+                alt="Person working on laptop"
+                className="rounded-xl shadow-lg object-cover w-full h-80 mb-8"
+              />
+              <p className="mb-4 italic text-white">
+                Need guidance? Let&apos;s map out your journey
+              </p>
             </div>
 
             {/* Right Content */}
@@ -139,9 +114,7 @@ export default function Homepage() {
                 Need clarity on your next steps?
               </p>
               <Link href="service">
-                <Button className="w-36 border border-white px-4 py-2 rounded bg-[#26656A] hover:bg-white hover:text-teal-900 transition">
-                  Learn more
-                </Button>
+                <Button>Learn more</Button>
               </Link>
             </div>
           </div>

@@ -9,9 +9,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <div className="flex mt-6 justify-center">
-      <section
-        className="flex h-full mt-5 md:mt-0 p-5 md:px-16 px-5 w-full flex-col md:flex-row gap-5 md:gap-0"
-      >
+      <section className="flex h-full mt-5 md:mt-0 p-5 md:px-16 px-5 w-full flex-col md:flex-row gap-5 md:gap-0">
         {/* Left Content */}
         <div className="flex items-start md:w-[50%] w-full flex-col justify-center">
           <h1 className="text-3xl sm:text-4xl font-bold leading-tight  text-[#28656A]">
@@ -29,9 +27,7 @@ export default function HeroSection() {
 
           <div className=" hidden mt-8 sm:flex gap-4">
             <Link href="contactUs">
-              <Button className="">
-                Book a Free Consultation
-              </Button>
+              <Button className="">Book a Free Consultation</Button>
             </Link>
             <Link href="service">
               <Button className="" variant={"outline"}>
@@ -52,9 +48,7 @@ export default function HeroSection() {
             />
             <div className=" sm:hidden mt-8 flex gap-3 px-3 flex-col">
               <Link href="contactUs">
-                <Button className="w-full">
-                  Book a Free Consultation
-                </Button>
+                <Button className="w-full">Book a Free Consultation</Button>
               </Link>
               <Link href="service">
                 <Button className="w-full" variant={"outline"}>
